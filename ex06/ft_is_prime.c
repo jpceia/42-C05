@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 21:06:13 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/01 22:06:14 by jceia            ###   ########.fr       */
+/*   Updated: 2020/12/03 19:52:03 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ int	ft_is_prime(int nb)
 
 	if (nb < 2)
 		return (0);
+	if (nb == 2)
+		return (1);
 	n = 2;
-	while (n < nb)
+	while (n * n <= nb)
 	{
 		if (nb % n == 0)
 			return (0);
