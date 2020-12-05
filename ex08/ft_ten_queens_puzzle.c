@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 21:15:40 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/05 02:24:19 by jceia            ###   ########.fr       */
+/*   Updated: 2020/12/05 02:34:51 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_putchar(char c)
 int		is_valid(int *rows, int n)
 {
 	int i;
+
 	i = 0;
 	while (i < n)
 	{
@@ -31,7 +32,7 @@ int		is_valid(int *rows, int n)
 	}
 	return (1);
 }
- 
+
 int		add_queen(int *rows, int n)
 {
 	int		i;
@@ -58,14 +59,9 @@ int		add_queen(int *rows, int n)
 	return (sum);
 }
 
-int		ft_ten_queen_puzzle(void)
+int		ft_ten_queens_puzzle(void)
 {
 	int	rows[10];
-	return (add_queen(rows, 0));
-}
 
-int		main(void)
-{
-	int n = ft_ten_queen_puzzle();
-	printf("Possible combinations: %d\n", n);
+	return (add_queen(rows, 0));
 }
