@@ -6,22 +6,30 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 21:06:13 by jceia             #+#    #+#             */
-/*   Updated: 2020/12/03 19:52:03 by jceia            ###   ########.fr       */
+/*   Updated: 2020/12/09 16:58:43 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
-	int n;
+	long n;
 
 	if (nb < 2)
 		return (0);
 	if (nb == 2)
 		return (1);
-	n = 2;
-	while (n * n <= nb)
+	if (nb == 3)
+		return (1);
+	if (nb % 2 == 0)
+		return (0);
+	if (nb % 3 == 0)
+		return (0);
+	n = 1;
+	while ((6 * n - 1) * (6 * n - 1) <= (long)nb)
 	{
-		if (nb % n == 0)
+		if (nb % (6 * n - 1) == 0)
+			return (0);
+		if (nb % (6 * n + 1) == 0)
 			return (0);
 		n++;
 	}
